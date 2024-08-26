@@ -1,0 +1,74 @@
+a {
+  color: inherit;
+  display: inline-block;
+}
+
+// bootstrap 沒有針對的字距變數可以設定，所以將字距設定寫在 base 中
+// h1,h2,h3,h4,h5,h6{
+//   // 設計稿上顯示為 10%
+//   letter-spacing: 0.1em;
+// }
+*{
+  // 設計稿上顯示為 10%
+  letter-spacing: 0.1em;
+}
+
+p{
+  // 設計稿上顯示為 5%
+  letter-spacing: 0.05em;  
+}
+
+// 元件設定
+// badge
+.badge{
+  background-color: $primary-300;
+  cursor: pointer;
+  
+  &:hover{
+    background-color: $primary-400;
+    color: $white;
+  }
+}
+
+// 按鈕
+.btn.btn-secondary-200{
+  color: white;
+
+  &:disabled{
+    background-color: $neutral-200;
+    border-color: $neutral-200;
+  }
+
+  &:hover{
+    background-color: $accent-300 ;
+    border-color: $accent-300 ;
+  }
+}
+
+// input-group
+.input-group {
+  max-width: 276px;
+  border: 1px solid #dee2e6;
+
+  @include media-breakpoint-down(lg) { 
+    max-width: 100%;
+  }
+}
+
+.search-form-control, .form-control:focus{
+  box-shadow: none;
+}
+
+.search-text{
+  color: $neutral-300;
+  font-weight: $font-weight-semibold;
+}
+.input-group:focus-within .search-text {
+  color: $neutral-600;
+  font-weight: $font-weight-bold;
+}
+#search:focus {
+  outline: none;
+  box-shadow: none;
+}
+
