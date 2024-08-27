@@ -1,3 +1,4 @@
+// banner
 .home-banner{
   height: 551px;
   background-image: url('/assets/images/banner-sm.webp');
@@ -9,4 +10,30 @@
     height: 621px;
     background-image: url('/assets/images/banner.webp');
   }
+}
+
+// hot-topic
+.hot-topic-cover{
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  &::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $neutral-600;
+    opacity: 0%;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: opacity 0.3s;
+  }
+
+  &:hover::after{
+    opacity: 40%;
+    cursor: pointer;
+  }
+  
 }
