@@ -1,0 +1,12 @@
+.home-banner{
+  height: 551px;
+  background-image: url('/assets/images/banner-sm.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include media-breakpoint-up(xs) { 
+    height: 621px;
+    background-image: url('/assets/images/banner.webp');
+  }
+}

@@ -535,7 +535,8 @@ $paragraph-margin-bottom:   0;//1rem !default;
 
 // scss-docs-start grid-breakpoints
 $grid-breakpoints: (
-  xs: 0,
+  xxs: 0,  
+  xs: 376px,
   sm: 576px,
   md: 768px,
   lg: 992px,
@@ -698,7 +699,8 @@ $font-sizes: (
   3: $h3-font-size,
   4: $h4-font-size,
   5: $h5-font-size,
-  6: $h6-font-size
+  6: $h6-font-size,
+  52: 3.25rem,
 ) !default;
 // scss-docs-end font-sizes
 

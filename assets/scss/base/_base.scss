@@ -4,14 +4,14 @@ a {
 }
 
 // bootstrap 沒有針對的字距變數可以設定，所以將字距設定寫在 base 中
-// h1,h2,h3,h4,h5,h6{
-//   // 設計稿上顯示為 10%
-//   letter-spacing: 0.1em;
-// }
-*{
+h1,h2,h3,h4,h5,h6{
   // 設計稿上顯示為 10%
   letter-spacing: 0.1em;
 }
+// *{
+//   // 設計稿上顯示為 10%
+//   letter-spacing: 0.1em;
+// }
 
 p{
   // 設計稿上顯示為 5%
@@ -44,6 +44,7 @@ p{
     border-color: $accent-300 ;
   }
 }
+
 
 // input-group
 .input-group {
