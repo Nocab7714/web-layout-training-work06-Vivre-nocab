@@ -2,3 +2,30 @@
   width: 1.5rem;
   height: 1.5rem;
 }
+
+// input-group
+.input-group {
+  max-width: 276px;
+  border: 1px solid #dee2e6;
+
+  @include media-breakpoint-down(lg) { 
+    max-width: 100%;
+  }
+}
+
+.search-form-control, .form-control:focus{
+  box-shadow: none;
+}
+
+.search-text{
+  color: $neutral-300;
+  font-weight: $font-weight-semibold;
+}
+.input-group:focus-within .search-text {
+  color: $neutral-600;
+  font-weight: $font-weight-bold;
+}
+#search:focus {
+  outline: none;
+  box-shadow: none;
+}

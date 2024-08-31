@@ -8,10 +8,6 @@ h1,h2,h3,h4,h5,h6{
   // 設計稿上顯示為 10%
   letter-spacing: 0.1em;
 }
-// *{
-//   // 設計稿上顯示為 10%
-//   letter-spacing: 0.1em;
-// }
 
 p{
   // 設計稿上顯示為 5%
@@ -45,31 +41,18 @@ p{
   }
 }
 
-
-// input-group
-.input-group {
-  max-width: 276px;
-  border: 1px solid #dee2e6;
-
-  @include media-breakpoint-down(lg) { 
-    max-width: 100%;
+// link hover
+.link-hover-secondary-200{
+  &:hover{
+    color: $accent-200;
   }
 }
 
-.search-form-control, .form-control:focus{
-  box-shadow: none;
+.multiline-ellipsis {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  word-break: break-word;     
+  white-space: normal;
 }
-
-.search-text{
-  color: $neutral-300;
-  font-weight: $font-weight-semibold;
-}
-.input-group:focus-within .search-text {
-  color: $neutral-600;
-  font-weight: $font-weight-bold;
-}
-#search:focus {
-  outline: none;
-  box-shadow: none;
-}
-
