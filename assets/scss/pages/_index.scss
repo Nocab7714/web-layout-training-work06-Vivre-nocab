@@ -35,5 +35,121 @@
     opacity: 40%;
     cursor: pointer;
   }
-  
+
 }
+
+// highlighted articles
+// 用於改變滑鼠 hover 時 swiper-prev 與 swiper-next 內中的箭頭顏色為白色
+.svg-hover-white:hover{
+  img{
+    filter: brightness(0) invert(1);
+  }
+}
+
+.swiperHighlightedArticles{
+
+  .swiper-slide {
+    border-bottom: 1px solid #6c757d;
+    min-height: 432px;
+  }
+}
+
+.swiper-pagination {
+  min-width: 232px;
+  width: 232px;
+  position: relative;
+
+  &::after{
+    content: "";
+    width: 80px;
+    height: 1px;
+    position: absolute;
+    background-color: #6c757d;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.swiper-pagination-current{
+  margin-right: 10px;
+}
+
+.swiper-pagination-total{
+  margin-left: 10px;
+}
+
+.swiper-button-disabled {
+  color: $neutral-200 !important;
+  border-color: $neutral-200 !important;
+}
+
+.swiper-button-disabled:hover {
+  background-color: initial !important;
+}
+
+.highlighted-articles-card, .card{
+  img{
+    transition: opacity 0.3s;
+  }
+  &:hover{
+    img{
+      transition: opacity 0.3s;
+      opacity: 70%;
+    }
+  }
+}
+
+
+// subscription plan
+.subscription-plan{
+  position: relative;
+  overflow: hidden;
+
+  &::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none;
+    width: 217px;
+    height: 76px;
+    background-image: url(/assets/images/bg-1.webp);
+  
+    @include media-breakpoint-up(md) { 
+      display: block;
+    }
+  }
+
+  &::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -45px;
+    display: block;
+    width: 160px;
+    height: 95px;
+    background-image: url(/assets/images/bg-2-sm.webp);
+    
+
+  
+    @include media-breakpoint-up(lg) { 
+      background-image: url(/assets/images/bg-2.webp);
+      width: 300px;
+      height: 185px;
+    }
+  }
+}
+
+// everyone is watching
+.everyone-is-watching{
+  .nav-pills .nav-link.active{
+      background-color: $accent-100;
+  }
+}
+
+
+// @include media-breakpoint-up() { 
+//   height: 621px;
+//   background-image: url('/assets/images/banner.webp');
+// }
