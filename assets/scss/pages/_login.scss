@@ -1,0 +1,26 @@
+// 由於「登入頁面」與「註冊頁面」使用相同的樣式，所以並沒有額外建立 _register.scss
+.other-methods{
+  position: relative;
+  padding: 0 20px;
+
+  &::before, &::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: calc(38% - 35px);
+    height: 1px;
+    background-color: $neutral-200;
+    
+  }
+
+  &::before{
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  &::after{
+    right: 0;
+    transform: translateY(-50%);
+  }
+}
+
