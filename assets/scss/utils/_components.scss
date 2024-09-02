@@ -1,0 +1,40 @@
+// badge
+.badge{
+  background-color: $primary-300;
+  cursor: pointer;
+  
+  &:hover{
+    background-color: $primary-400;
+    color: $white;
+  }
+}
+
+// 按鈕
+.btn.btn-secondary-200{
+  color: white;
+
+  &:disabled{
+    background-color: $neutral-200;
+    border-color: $neutral-200;
+  }
+
+  &:hover{
+    background-color: $accent-300 ;
+    border-color: $accent-300 ;
+  }
+}
+
+.btn-gray-100{
+  color: #52525b !important;
+  
+  &:hover{
+    background-color: $neutral-200;
+  }
+}
+
+// link hover
+.link-hover-secondary-200{
+  &:hover{
+    color: $accent-200 !important;
+  }
+}
