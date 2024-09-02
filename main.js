@@ -50,3 +50,14 @@ const swiperEveryoneIsWatching = new Swiper('.swiperEveryoneIsWatching ', {
     },
   },
 });
+
+const swiperSubscription = new Swiper('.swiperSubscription ', {
+  slidesPerView: 1.1,
+  spaceBetween: 24,
+  autoHeight: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  loop: true,
+});

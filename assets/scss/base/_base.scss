@@ -44,7 +44,7 @@ p{
 // link hover
 .link-hover-secondary-200{
   &:hover{
-    color: $accent-200;
+    color: $accent-200 !important;
   }
 }
 

@@ -35,7 +35,6 @@
     opacity: 40%;
     cursor: pointer;
   }
-
 }
 
 // highlighted articles
@@ -148,8 +147,50 @@
   }
 }
 
+// subscription
+.subscription-bg {
+  height: 236px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
-// @include media-breakpoint-up() { 
-//   height: 621px;
-//   background-image: url('/assets/images/banner.webp');
-// }
+.subscription-bg::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0%;
+  background-color: #21252966;
+  border-radius: 4px;
+  transition: opacity 0.25s;
+  
+}
+
+.subscription-link:hover{
+
+  .subscription-bg::after{
+    opacity: 40%;
+  }
+}
+
+
+.subscription-text{
+  position: relative;
+
+  &::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(359.16deg, #212529 0.73%, rgba(33, 37, 41, 0.05) 99.27%);
+  }
+}
+
+.subscription-badge{
+  left: 73px;
+}
