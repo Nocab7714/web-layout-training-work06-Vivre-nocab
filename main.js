@@ -61,3 +61,14 @@ const swiperSubscription = new Swiper('.swiperSubscription ', {
   },
   loop: true,
 });
+
+const swiperFurtherReading = new Swiper('.swiperFurtherReading ', {
+  slidesPerView: 1.1,
+  spaceBetween: 24,
+  autoHeight: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  loop: true,
+});

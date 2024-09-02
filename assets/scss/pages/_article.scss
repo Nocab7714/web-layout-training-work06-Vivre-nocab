@@ -1,0 +1,23 @@
+.article-banner{
+  height: 240px;
+  background-image: url('/assets/images/article-banner-sm.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0;
+
+  @include media-breakpoint-up(xs) { 
+    height: 454px;
+    background-image: url('/assets/images/article-banner.webp');
+    border-radius: 4px;
+  }
+}
+
+
+.further-reading-card:hover{
+  transition: color 0.3s;
+
+  .card-title{
+    color: $accent-200;
+  }
+}
