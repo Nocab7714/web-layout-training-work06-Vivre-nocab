@@ -589,6 +589,7 @@ $utilities: map-merge(
     "color": (
       property: color,
       class: text,
+      responsive: true,
       local-vars: (
         "text-opacity": 1
       ),
@@ -607,6 +608,7 @@ $utilities: map-merge(
     ),
     "text-opacity": (
       css-var: true,
+      responsive: true,
       class: text-opacity,
       values: (
         25: .25,
@@ -617,6 +619,7 @@ $utilities: map-merge(
     ),
     "text-color": (
       property: color,
+      responsive: true,
       class: text,
       values: $utilities-text-emphasis-colors
     ),
