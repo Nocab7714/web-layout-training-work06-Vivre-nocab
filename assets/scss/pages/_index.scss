@@ -30,10 +30,11 @@
     border-bottom-right-radius: 20px;
     transition: opacity 0.3s;
   }
+}
 
-  &:hover::after{
+.hot-topic-link:hover{
+  .hot-topic-cover::after{
     opacity: 40%;
-    cursor: pointer;
   }
 }
 
