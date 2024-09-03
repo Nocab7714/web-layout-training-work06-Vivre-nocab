@@ -49,8 +49,11 @@
 .swiperHighlightedArticles{
 
   .swiper-slide {
-    border-bottom: 1px solid #6c757d;
-    min-height: 432px;
+    border-bottom: 1px solid $neutral-400;
+  }
+
+  .card{
+    min-height: 430px !important;
   }
 }
 
@@ -80,7 +83,6 @@
 }
 
 .swiper-button-disabled {
-  // color: $neutral-200 !important;
   border-color: $neutral-200 !important;
 }
 
