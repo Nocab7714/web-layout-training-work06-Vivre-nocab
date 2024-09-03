@@ -13,11 +13,29 @@
   }
 }
 
-
 .further-reading-card:hover{
   transition: color 0.3s;
 
   .card-title{
     color: $accent-200;
   }
+}
+
+#hiddenContent {
+  display: none;
+}
+
+.white-linear-gradient{
+  position: relative;
+
+  &::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+  }
+
 }
