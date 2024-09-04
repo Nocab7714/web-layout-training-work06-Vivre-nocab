@@ -14,7 +14,49 @@
   <body>
     <!-- header -->
     <%- include('./layout/header'); -%>
-    <p>Vivre | 付款成功</p>
+    <div class="container py-12 py-lg-15">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <h2 class="fs-3 fs-md-1 text-secondary-200 text-center mb-6 mb-md-10">
+            <i class="bi bi-check2-circle fs-4 fs-md-1 me-3 me-md-5"></i
+            >付款成功
+          </h2>
+          <div class="bg-white border border-primary-300 rounded-4 p-6 p-md-10">
+            <h3 class="fs-5 fs-md-4 fw-bolder text-gray-600 mb-6">訂購資訊</h3>
+            <div class="py-6 border-top border-bottom mb-6 mb-md-10">
+              <div class="mb-6 mb-md-10">
+                <div
+                  class="d-flex justify-content-between mb-2 mb-md-3 text-gray-600"
+                >
+                  <span class="fs-6 fs-md-5 fw-bold fw-md-bolder"
+                    >輕量型方案</span
+                  >
+                  <span class="fs-6 fs-md-5 fw-bold">NT 1,188</span>
+                </div>
+                <span class="fs-6 fw-bold text-gray-400">年繳</span>
+              </div>
+              <div
+                class="d-flex justify-content-between mb-2 mb-md-3 text-gray-400 fs-6 fw-bold mb-4"
+              >
+                <span>開始日</span>
+                <time>2024 / 5 / 1</time>
+              </div>
+              <div
+                class="d-flex justify-content-between mb-2 mb-md-3 text-gray-400 fs-6 fw-bold"
+              >
+                <span>終止日</span>
+                <time>2025 / 5 / 1</time>
+              </div>
+            </div>
+            <a
+              href="article.html"
+              class="btn btn-secondary-200 fs-6 fs-md-5 fw-bold fw-md-bolder w-100"
+              >預覽文章<i class="bi bi-arrow-right ms-3"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- footer -->
     <%- include('./layout/footer'); -%>
     <script type="module" src="../main.js"></script>

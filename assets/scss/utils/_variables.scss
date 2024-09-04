@@ -458,6 +458,8 @@ $spacers: (
   13: $spacer * 4,    //64x
   14: $spacer * 5,    //80x
   15: $spacer * 6.25, //100x
+  // add
+  70: $spacer * 4.375, //70x
 ) ;
 // $spacers: (
 //   0: 0,
@@ -1006,7 +1008,7 @@ $form-check-input-active-filter:          brightness(90%) !default;
 
 $form-check-input-bg:                     $input-bg !default;
 $form-check-input-border:                 var(--#{$prefix}border-width) solid $accent-200;//var(--#{$prefix}border-width) solid var(--#{$prefix}border-color) !default;
-$form-check-input-border-radius:          .25em !default;
+$form-check-input-border-radius:          0;//.25em !default;
 $form-check-radio-border-radius:          50% !default;
 $form-check-input-focus-border:           $accent-200;//$input-focus-border-color !default;
 $form-check-input-focus-box-shadow:       $focus-ring-box-shadow !default;
