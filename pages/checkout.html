@@ -26,7 +26,7 @@
         </ol>
       </nav>
       <h2 class="fs-3 fs-md-1 fw-bolder mb-10 mb-md-11">付款</h2>
-      <form>
+      <form class="needs-validation" novalidate>
         <div class="row">
           <div class="col-lg-7">
             <div
@@ -43,7 +43,9 @@
                   id="buyerNameCheckout"
                   placeholder="請輸入姓名"
                   title="請輸入您的姓名"
+                  required
                 />
+                <div class="invalid-feedback">購買人姓名為必填</div>
               </div>
               <div class="mb-4">
                 <label
@@ -57,7 +59,9 @@
                   id="buyerPasswordCheckout"
                   placeholder="請輸入密碼"
                   title="請輸入您的密碼"
+                  required
                 />
+                <div class="invalid-feedback">密碼為必填</div>
               </div>
               <div class="mb-6">
                 <label for="buyerEmailCheckout" class="form-label fw-bold mb-3"
@@ -68,7 +72,9 @@
                   class="form-control"
                   id="buyerEmailCheckout"
                   title="請輸入您的信電子信箱"
+                  required
                 />
+                <div class="invalid-feedback">電子信箱為必填</div>
               </div>
               <div class="form-check ms-2">
                 <input
@@ -121,7 +127,9 @@
                   oninput="value=value.replace(/[^\d]/g,'')"
                   maxlength="16"
                   title="請輸入 16 位數字的信用卡卡號"
+                  required
                 />
+                <div class="invalid-feedback">請填寫正確的信用卡卡號</div>
               </div>
               <div class="mb-6">
                 <div class="row">
@@ -137,11 +145,15 @@
                         class="form-control"
                         id="buyerCreditCardDateCheckout"
                         maxlength="4"
-                        pattern="\d{16}"
+                        pattern="\d{4}"
                         oninput="value=value.replace(/[^\d]/g,'')"
                         placeholder="MM/YY"
                         title="請輸入 4 位數字信用卡到期日"
+                        required
                       />
+                      <div class="invalid-feedback">
+                        請填寫正確的信用卡到期日
+                      </div>
                     </div>
                   </div>
                   <div class="col">
@@ -155,12 +167,16 @@
                         type="text"
                         class="form-control"
                         id="buyerCreditCardVerificationCodeCheckout"
-                        pattern="\d{16}"
+                        pattern="\d{3}"
                         oninput="value=value.replace(/[^\d]/g,'')"
                         maxlength="3"
                         placeholder="CVV"
                         title="請輸入 3 位數字信用卡驗證碼"
+                        required
                       />
+                      <div class="invalid-feedback">
+                        請填寫正確的信用卡認證碼
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -262,12 +278,13 @@
                 立即付款<i class="bi bi-arrow-right ms-3"></i>
               </a>
               <!-- 因此專案為展示切版內容，並未實際串接 API 進行表單的提交動作，如需提交表單請更改按鈕為以下結構 -->
+              <!-- 若要預覽驗證狀態，需使用 type="submit" 按鈕才能觸發表單驗證 -->
               <!-- <button
-              type="submit"
-              class="btn btn-secondary-200 btn btn-secondary-200 fs-6 fs-md-5 fw-bold fw-md-bolder py-3 py-md-4 w-100"
-            >
-              立即付款<i class="bi bi-arrow-right ms-3"></i>
-            </button> -->
+                type="submit"
+                class="btn btn-secondary-200 btn btn-secondary-200 fs-6 fs-md-5 fw-bold fw-md-bolder py-3 py-md-4 w-100"
+              >
+                立即付款<i class="bi bi-arrow-right ms-3"></i>
+              </button> -->
             </div>
           </div>
         </div>
@@ -276,5 +293,30 @@
     <!-- footer -->
     <%- include('./layout/footer'); -%>
     <script type="module" src="../main.js"></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (() => {
+        'use strict';
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll('.needs-validation');
+
+        // Loop over them and prevent submission
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            'submit',
+            (event) => {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add('was-validated');
+            },
+            false
+          );
+        });
+      })();
+    </script>
   </body>
 </html>
