@@ -1,0 +1,18 @@
+.about-us-banner{
+  height: 240px;
+  background-image: url('/assets/images/about-banner-sm.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0;
+
+  @include media-breakpoint-up(xs) { 
+    height: 454px;
+    background-image: url('/assets/images/about-banner.webp');
+    border-radius: 4px;
+  }
+}
+
+.w-48px{
+  min-width: 48px !important;
+}
