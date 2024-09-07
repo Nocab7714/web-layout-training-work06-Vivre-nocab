@@ -1,48 +1,61 @@
-# 網頁切版直播班 Vite 範例 - Bootstrap 版本
+# # Vivre - 文章訂閱平台網站
 
-## Node.js 版本
-  - 專案的 Node.js 版本需為 v16 以上
-  - 查看自己版本指令：`node -v`
+這是我參與六角學院 2024 切版直播班製作的 Vivre 文章訂閱平台網站 。
 
+## 畫面
+![Vivre-01](https://raw.githubusercontent.com/Nocab7714/web-layout-training-work06-Vivre-nocab/main/assets/images/ReadMe/readme-01.webp)
+![Vivre-02](https://raw.githubusercontent.com/Nocab7714/web-layout-training-work06-Vivre-nocab/main/assets/images/ReadMe/readme-02.webp)
+![Vivre-03](https://raw.githubusercontent.com/Nocab7714/web-layout-training-work06-Vivre-nocab/main/assets/images/ReadMe/readme-03.webp)
+![Vivre-04](https://raw.githubusercontent.com/Nocab7714/web-layout-training-work06-Vivre-nocab/main/assets/images/ReadMe/readme-04.webp)
+![Vivre-05](https://raw.githubusercontent.com/Nocab7714/web-layout-training-work06-Vivre-nocab/main/assets/images/ReadMe/readme-05.webp)
 
-## 指令列表
-- `npm install` - 初次下載該範例專案後，需要使用 npm install 來安裝套件
-- `npm run dev` - 執行開發模式
-  - 若沒有自動開啟瀏覽器，可嘗試手動在瀏覽器上輸入
-    `http://localhost:5173/<專案名稱>/pages/index.html`
-- `npm run build` - 執行編譯模式（不會開啟瀏覽器）
-- `npm ru deploy` - 自動化部署
+## 安裝流程
 
-## 資料夾結構
-  - assets # 靜態資源放置處
-    - images # 圖片放置處
-    - scss # SCSS 的樣式放置處
+以下將會引導你如何安裝此專案到你的電腦上。
 
-  - layout # ejs 模板放置處
-  - pages # 頁面放置處
+### 取得專案
 
-- JavaScript 程式碼可寫在 main.js 檔案
-
-### 注意事項
-- 已將 pages 資料夾內的 index.html 預設為首頁，建議不要任意修改 index.html 的檔案名稱
-- .gitignore 檔案是用來忽略掉不該上傳到 GitHub 的檔案（例如 node_modules），請不要移除 .gitignore
-
-## 開發模式的監聽
-vite 專案執行開發模式 `npm run dev` 後即會自動監聽，不需要使用 `Live Sass Compiler` 的 `Watch SCSS` 功能
-
-
-## 部署 gh-pages 流程說明
-### Windows 版本
-1. 在 GitHub 建立一個新的 Repository
-
-2. 部署前請務必先將原始碼上傳到 GitHub Repository 也就是初始化 GitHub，因此通常第一步驟會在專案終端機輸入以下指令
-```cmd
-git init # 若已經初始化過就可以不用輸入
-git add .
-git commit -m 'first commit'
-git branch -M main
-git remote add origin [GitHub Repositories Url]
-git push -u origin main // 僅限第一次輸入，往後只需要輸入 git push
+```bash
+git clone git@github.com:Nocab7714/web-layout-training-work06-Vivre-nocab.git
 ```
 
-3. 初始化完畢後，執行 `npm run deploy` 指令進行自動化部署
+### 移動到專案內
+
+```bash
+cd web-layout-training-work06-Vivre-nocab.git
+```
+
+### 安裝套件
+
+```bash
+npm install
+```
+
+### 運行專案
+
+```bash
+npm run dev
+```
+
+## 資料夾說明
+
+- assets - 靜態資源放置處
+  - images - 圖片資源放置處
+  - scss - scss 資源放置處
+    - base - 基礎設定資源放置處
+    - layout - 佈局資源放置處
+    - pages - 頁面資源放置處
+    - utils - 變數、通用類別資源放置處
+- layout - 佈局資源放置處
+
+## 專案技術
+
+- Vite 4.5.3
+- Bootstrap 5.3.3
+- Bootstrap Icons 1.11.3
+- Swiper 11.1.10
+- Aos 3.0.0-beta.6
+
+## 聯絡作者
+
+- email: nocab7714@gmail
