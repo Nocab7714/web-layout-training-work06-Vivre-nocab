@@ -6,3 +6,8 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 // swiper
 import './swiper';
+
+// AOS
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
